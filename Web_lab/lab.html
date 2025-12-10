@@ -1,14 +1,3 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    
-</body>
-</html>
 <!doctype html>
 <html lang="mn">
 <head>
@@ -17,16 +6,15 @@
   <title>CSS Энгийн Жишээ</title>
 
   <style>
-    /* ------- Суурь тохиргоо ------- */
     :root{
-      --brand: #2563eb;        /* Өнгөө ингэж хувьсагчаар хадгалж болно */
+      --brand: #2563eb;
       --text:  #1f2937;
       --muted: #6b7280;
       --bg:    #f8fafc;
       --card:  #ffffff;
     }
 
-    * { box-sizing: border-box; }   /* box model тогтвортой болгоно */
+    * { box-sizing: border-box; }
     body{
       margin: 0;
       font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
@@ -35,11 +23,10 @@
       line-height: 1.6;
     }
 
-    /* ------- Толгой хэсэг ------- */
     header{
       background: var(--card);
       border-bottom: 1px solid #e5e7eb;
-      position: sticky; top: 0;     /* Дээр наалдаатай */
+      position: sticky; top: 0;
       z-index: 10;
     }
     .container{
@@ -50,8 +37,8 @@
     .nav{
       display: flex;
       align-items: center;
-      gap: 16px;
       justify-content: space-between;
+      gap: 16px;
     }
     .logo{
       font-weight: 700;
@@ -69,14 +56,13 @@
       color: var(--brand);
     }
 
-    /* ------- Баатар хэсэг (hero) ------- */
     .hero{
       padding: 48px 0 24px;
       text-align: center;
     }
     .hero h1{
       margin: 0 0 8px;
-      font-size: clamp(24px, 4vw, 40px); /* responsive хэмжээ */
+      font-size: clamp(24px, 4vw, 40px);
     }
     .hero p{
       color: var(--muted);
@@ -94,7 +80,6 @@
     }
     .btn:hover{ transform: translateY(-2px); }
 
-    /* ------- Картын тор (grid) ------- */
     .grid{
       display: grid;
       grid-template-columns: repeat(3, 1fr);
@@ -110,7 +95,6 @@
     .card h3{ margin: 0 0 8px; }
     .card p{ color: var(--muted); margin: 0; }
 
-    /* ------- Хөл хэсэг ------- */
     footer{
       border-top: 1px solid #e5e7eb;
       color: var(--muted);
@@ -118,64 +102,14 @@
       padding: 24px 0 40px;
     }
 
-    /* ------- Жижиг дэлгэцийн тохиргоо ------- */
     @media (max-width: 720px){
       .grid{ grid-template-columns: 1fr 1fr; }
     }
     @media (max-width: 480px){
-      .links{ display: none; }           /* жижиг дэлгэц дээр линк нууна */
+      .links{ display: none; }
       .grid{ grid-template-columns: 1fr; }
       .hero{ padding: 32px 0 12px; }
     }
 
-    /* ------- Жишээ класс, id селектор ------- */
     .highlight{ background: #fff7ed; border-left: 4px solid #f59e0b; padding: 10px 12px; }
-    #special-note{ font-style: italic; }
-  </style>
-</head>
-<body>
-
-  <header>
-    <div class="container nav">
-      <div class="logo">MiniSite</div>
-      <nav class="links">
-        <a href="#">Нүүр</a>
-        <a href="#">Бидний тухай</a>
-        <a href="#">Холбоо барих</a>
-      </nav>
-    </div>
-  </header>
-
-  <main class="container">
-    <section class="hero">
-      <h1>CSS энгийн жишээ сайт</h1>
-      <p>Flex/Grid, hover, media query зэрэг үндсэн санааг багтаав.</p>
-      <a class="btn" href="#features">Эхэлье</a>
-    </section>
-
-    <section id="features" class="grid">
-      <article class="card">
-        <h3>Хурдан загвар</h3>
-        <p>Box model, spacing, border-radius ашиглав.</p>
-      </article>
-      <article class="card">
-        <h3>Responsive</h3>
-        <p>Media query болон clamp() хэмжээ.</p>
-      </article>
-      <article class="card">
-        <h3>Цэвэр код</h3>
-        <p>CSS хувьсагч, семантик class нэршил.</p>
-      </article>
-    </section>
-
-    <div class="highlight" id="special-note">
-      Энэ мөр нь <strong>class</strong> ба <strong>id</strong> селекторын ялгааг харуулах зорилготой.
-    </div>
-  </main>
-
-  <footer>
-    © 2025 Миний жижиг сайт — Жишээ код
-  </footer>
-
-</body>
-</html>
+    #special-note{ font-
