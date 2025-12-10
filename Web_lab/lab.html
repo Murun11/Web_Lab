@@ -3,40 +3,40 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Move Image with Keyboard</title>
 </head>
 <body>
-    
-</body>
-</html>
-<!DOCTYPE html>
-<html>
-<body>
-<img src="photo.jpg/photo.jpg" id="mushroom" style="width: 200px; height: 200px; position: absolute; left: 0; top: 0;">
+
+<img src="photo.jpg" id="mushroom" 
+     style="width: 200px; height: 200px; position: absolute; left: 0; top: 0;">
+
 <script>
 var im = document.getElementById('mushroom');
+
+// Load үед байрлал тохируулах
 window.addEventListener('load', () => {
-  im.style.position = 'absolute';
-  im.style.left = '0px';
-  im.style.top = '0px';
+  im.style.left = "0px";
+  im.style.top  = "0px";
 });
 
+// Keyboard удирдлага
 document.onkeydown = function(e) {
   switch(e.key) {
-    case "a":
+    case "a":  // Зүүн
       im.style.left = parseInt(im.style.left) - 50 + "px";
       break;
-    case "d":
+    case "d":  // Баруун
       im.style.left = parseInt(im.style.left) + 50 + "px";
       break;
-    case "w":
+    case "w":  // Дээш
       im.style.top = parseInt(im.style.top) - 50 + "px";
       break;
-    case "s":
+    case "s":  // Доош
       im.style.top = parseInt(im.style.top) + 50 + "px";
       break;
   }
 }
 </script>
+
 </body>
 </html>
